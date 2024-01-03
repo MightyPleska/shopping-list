@@ -19,7 +19,7 @@ function onAddItemSubmit(e) {
 
     //validate input
     if (newItem === "") {
-        alert("Unesi item");
+        alert("Please enter an item");
         return;
     }
 
@@ -33,7 +33,7 @@ function onAddItemSubmit(e) {
         isEditMode = false;
     } else{
         if(checkIfItemExists(newItem)) {
-            alert('Već imaš to.');
+            alert('You already have that item.');
             return;
         }
     }
@@ -114,7 +114,7 @@ function setItemToEdit(item){
 }
 
 function removeItem(item){
-    if(confirm('Jesi siguran?')){
+    if(confirm('Are you sure?')){
         //remove item from DOM
         item.remove();
         checkUI();
